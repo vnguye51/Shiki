@@ -1,0 +1,1 @@
+image_xscale = PlayerObj.hp/100
