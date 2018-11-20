@@ -8,6 +8,7 @@ mp = 0
 hp = 50
 
 grounded = false;
+on_slope = false;
 invuln = false;
 control = true;
 alive = true;

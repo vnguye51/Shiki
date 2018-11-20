@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "6cd163fc-1924-401f-8532-0d002a7a22aa",
+            "Value": {
+                "id": "9a63a392-97cb-4f28-baf3-3a1751b20b50",
+                "resourcePath": "objects\\SlopeObj\\SlopeObj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6d31d07a-0ffa-424d-9534-4471e9a84885",
             "Value": {
                 "id": "654387d8-219a-49ad-832a-4836a9289072",

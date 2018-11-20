@@ -6,7 +6,9 @@ if control == true
 	key_left = -keyboard_check(vk_left);
 	key_down = keyboard_check(vk_down);
 	key_jump = keyboard_check(vk_control);
-	key_space = keyboard_check_pressed(vk_space)
+	key_jump_pressed = keyboard_check_pressed(vk_control);
+	key_space = keyboard_check_pressed(vk_space);
+	
 	key_shift = keyboard_check_pressed(vk_shift)
 }
 else
@@ -14,6 +16,7 @@ else
 	key_right = false
 	key_left = false
 	key_jump = false
+	key_just_jump = false
 	key_down = false
 	key_space = false
 	key_shift = false
@@ -29,10 +32,9 @@ if (attacking == true) and (alarm_get(2) <= 15)
 	
 
 
-
+on_slope = false
 move = key_left + key_right
 hsp = move*movespeed
-
 
 
 
@@ -45,14 +47,14 @@ if (vsp < 6)
 }
 //======================================
 //Check if the player is on the ground
-if (place_meeting(x,y+1,WallObj))
+if (place_meeting(x,y+2,WallObj) or place_meeting(x,y+2,SlopeObj)) 
 {
 	if grounded == false
 	{
 	audio_play_sound(StepSFX,0,0)
 	}
 	grounded = true
-	if (key_jump == true) //initialize jumping
+	if (key_jump_pressed == true) //initialize jumping
 	{
 		jumping = true
 		alarm[4] = 15
@@ -63,10 +65,11 @@ else
 	grounded = false
 }
 //=======================================
+
 //Jumping Logic
 if (jumping == true)
 {
-	if (key_jump == true) //Check to see if player is still jumping
+	if (key_jump == true ) //Check to see if player is still jumping
 	{
 		vsp = key_jump * -jumpspeed
 	}
@@ -111,18 +114,71 @@ if (place_meeting(x+hsp,y,WallObj))
 	hsp = 0;
 }
 
-x += hsp;
+
 //Vertical Collision
 if (place_meeting(x,y+vsp,WallObj))
 {
 	while(not place_meeting(x,y+sign(vsp),WallObj))
 	{
 		y += sign(vsp);
+
 	}
 	vsp = 0;
 }
-show_debug_message(vsp)
+
+//Slope Collision
+if (grounded and move == -1 and place_meeting(x+hsp, y+4,SlopeObj) and key_jump == false)
+{
+	on_slope = true
+	while(not place_meeting(x+hsp,y+1,SlopeObj))
+	{
+		y += 1;
+	}
+	vsp = 0
+}
+
+if (place_meeting(x,y+vsp,SlopeObj) and key_jump == false)
+{
+	on_slope = true
+	while(not place_meeting(x,y+sign(vsp),SlopeObj))
+	{
+		y += 1;
+	}
+	vsp = 0;
+	if (move == 1)
+	{
+		hsp = 2
+	}
+	else if (move == -1)
+	{
+		hsp = -2
+		while(not place_meeting(x+hsp,y+1,SlopeObj) and (not place_meeting(x+hsp,y+1,WallObj)))
+		{
+			y += 1;
+		}
+	}
+	if (place_meeting(x+hsp,y,WallObj))
+	{
+		while(place_meeting(x+hsp,y,WallObj))
+		{
+			y += -1;
+		}
+	}
+}
+
+
+if (place_meeting(x+hsp,y,SlopeObj))
+{
+	while(place_meeting(x+hsp,y,SlopeObj))
+	{
+		y += -1;
+	}
+}
+
+x += hsp;
 y += vsp;
+
+show_debug_message(y)
 
 if (place_meeting(x,y,EnemyObj)) //Might want to move this code into the enemy later
 {
@@ -148,7 +204,7 @@ if (place_meeting(x,y,EnemyObj)) //Might want to move this code into the enemy l
 	}
 }
 
-// ANIMATIONS//
+//// ANIMATIONS//
 PrevSprite = sprite_index
 image_speed = 1
 
