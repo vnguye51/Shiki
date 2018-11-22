@@ -19,3 +19,12 @@ jumping = false;
 
 //Values in previous frame
 PrevSprite = sprite_index
+
+//Key Controls
+	key_right = false;
+	key_left = false;
+	key_down = false;
+	key_jump = false;
+	key_jump_pressed = false;
+	key_space = false;
+	key_shift = false;

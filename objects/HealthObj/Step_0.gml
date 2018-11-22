@@ -10,9 +10,9 @@ if (vsp < 6)
 
 
 //Vertical Collision
-if (place_meeting(x,y+vsp,WallObj))
+if (place_meeting(x,y+vsp,CollisionObj))
 {
-	while(not place_meeting(x,y+sign(vsp),WallObj))
+	while(not place_meeting(x,y+sign(vsp),CollisionObj))
 	{
 		y += sign(vsp);
 	}

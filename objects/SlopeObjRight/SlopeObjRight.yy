@@ -1,19 +1,10 @@
 {
-    "id": "6cd163fc-1924-401f-8532-0d002a7a22aa",
+    "id": "f15ad8c8-681c-48a9-a397-7c9792f8ad63",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "SlopeObj",
+    "name": "SlopeObjRight",
     "eventList": [
-        {
-            "id": "88bb066b-86fe-4aff-9e80-aea8a8444e97",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "6cd163fc-1924-401f-8532-0d002a7a22aa"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -33,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "8a9cc487-1153-4552-b96b-52555210dff0",
+    "spriteId": "b9e20912-59d3-4432-990c-d06c34df813d",
     "visible": true
 }

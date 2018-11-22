@@ -16,7 +16,7 @@ else
 	key_right = false
 	key_left = false
 	key_jump = false
-	key_just_jump = false
+	key_jump_pressed = false
 	key_down = false
 	key_space = false
 	key_shift = false
@@ -47,23 +47,47 @@ if (vsp < 6)
 }
 //======================================
 //Check if the player is on the ground
-if (place_meeting(x,y+2,WallObj) or place_meeting(x,y+2,SlopeObj)) 
+var OneWay = instance_place(x, y+3, OneWayObj)
+if (place_meeting(x,y+3,CollisionObj))
 {
-	if grounded == false
+	if(vsp > 0)
 	{
-	audio_play_sound(StepSFX,0,0)
+		if grounded == false
+		{
+		audio_play_sound(StepSFX,0,0)
+		}
+		grounded = true
 	}
-	grounded = true
-	if (key_jump_pressed == true) //initialize jumping
+	if (key_jump_pressed == true and key_down == false and grounded == true) //initialize jumping
 	{
 		jumping = true
 		alarm[4] = 15
 	}
 }  
+
+
+else if OneWay != noone
+{
+	if vsp > 0 and (round(y + 25) < OneWay.y)
+	{
+		if grounded == false
+		{
+		audio_play_sound(StepSFX,0,0)
+		}
+		grounded = true
+	}
+	if (key_jump_pressed == true) and key_down == false and grounded == true //initialize jumping
+	{
+		jumping = true
+		alarm[4] = 15
+	}
+}  
+
 else 
 {
 	grounded = false
 }
+
 //=======================================
 
 //Jumping Logic
@@ -114,6 +138,14 @@ if (place_meeting(x+hsp,y,WallObj))
 	hsp = 0;
 }
 
+//Corner forgiveness
+if (place_meeting(x,y,OneWayObj))
+{
+	if not place_meeting(x,y-1,OneWayObj)
+	{
+		y += -1
+	}
+}
 
 //Vertical Collision
 if (place_meeting(x,y+vsp,WallObj))
@@ -126,10 +158,34 @@ if (place_meeting(x,y+vsp,WallObj))
 	vsp = 0;
 }
 
+
+//One Way Collision
+var OneWay = instance_place(x, y+vsp, OneWayObj)
+if OneWay != noone
+{
+	//Falling and starting above the platform
+	if key_down and key_jump_pressed
+	{
+		y += 1
+		grounded = false
+	}
+	if vsp > 0 and (round(y + 25) < OneWay.y) 
+	{
+		while(not place_meeting(x,y+sign(vsp),OneWayObj))
+		{
+			y += sign(vsp);
+		}
+		vsp = 0;
+	}
+}
+	 
+	
+		
+
 //Slope Collision
+//LeftSlope Collision
 if (grounded and move == -1 and place_meeting(x+hsp, y+4,SlopeObj) and key_jump == false)
 {
-	on_slope = true
 	while(not place_meeting(x+hsp,y+1,SlopeObj))
 	{
 		y += 1;
@@ -139,7 +195,6 @@ if (grounded and move == -1 and place_meeting(x+hsp, y+4,SlopeObj) and key_jump 
 
 if (place_meeting(x,y+vsp,SlopeObj) and key_jump == false)
 {
-	on_slope = true
 	while(not place_meeting(x,y+sign(vsp),SlopeObj))
 	{
 		y += 1;
@@ -166,7 +221,6 @@ if (place_meeting(x,y+vsp,SlopeObj) and key_jump == false)
 	}
 }
 
-
 if (place_meeting(x+hsp,y,SlopeObj))
 {
 	while(place_meeting(x+hsp,y,SlopeObj))
@@ -175,10 +229,57 @@ if (place_meeting(x+hsp,y,SlopeObj))
 	}
 }
 
+//Right Slope Collision
+if (grounded and move == 1 and place_meeting(x+hsp, y+4,SlopeObjRight) and key_jump == false)
+{
+	while(not place_meeting(x+hsp,y+1,SlopeObjRight))
+	{
+		y += 1;
+	}
+	vsp = 0
+}
+
+if (place_meeting(x,y+vsp,SlopeObjRight) and key_jump == false)
+{
+	while(not place_meeting(x,y+sign(vsp),SlopeObjRight))
+	{
+		y += 1;
+	}
+	vsp = 0;
+	if (move == -1)
+	{
+		hsp = -2
+	}
+	else if (move == 1)
+	{
+		hsp = 2
+		while(not place_meeting(x+hsp,y+1,SlopeObjRight) and (not place_meeting(x+hsp,y+1,WallObj)))
+		{
+			y += 1;
+		}
+	}
+	if (place_meeting(x+hsp,y,WallObj))
+	{
+		while(place_meeting(x+hsp,y,WallObj))
+		{
+			y += -1;
+		}
+	}
+}
+
+
+if (place_meeting(x+hsp,y,SlopeObjRight))
+{
+	while(place_meeting(x+hsp,y,SlopeObjRight))
+	{
+		y += -1;
+	}
+}
+
 x += hsp;
 y += vsp;
 
-show_debug_message(y)
+
 
 if (place_meeting(x,y,EnemyObj)) //Might want to move this code into the enemy later
 {
@@ -204,7 +305,7 @@ if (place_meeting(x,y,EnemyObj)) //Might want to move this code into the enemy l
 	}
 }
 
-//// ANIMATIONS//
+// ANIMATIONS//
 PrevSprite = sprite_index
 image_speed = 1
 

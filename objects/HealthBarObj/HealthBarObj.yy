@@ -5,16 +5,6 @@
     "name": "HealthBarObj",
     "eventList": [
         {
-            "id": "fa6476b6-0dff-4f06-a1d0-8b4df42fa45f",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "2ee1d2ae-4086-44db-9f1c-30189955749e"
-        },
-        {
             "id": "2047c921-c550-4d35-9494-2fae1850051e",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -32,6 +22,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
+            "m_owner": "2ee1d2ae-4086-44db-9f1c-30189955749e"
+        },
+        {
+            "id": "15a5140b-026d-4db1-a13c-6f1266c35d54",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
             "m_owner": "2ee1d2ae-4086-44db-9f1c-30189955749e"
         }
     ],

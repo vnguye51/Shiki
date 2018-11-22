@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "62264f8a-5c64-4958-a241-19ff6c2b89bd",
+            "Value": {
+                "id": "b8ef5cd6-642c-429f-90f7-b5e0db998eb6",
+                "resourcePath": "sprites\\OneWaySprite\\OneWaySprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6cd163fc-1924-401f-8532-0d002a7a22aa",
             "Value": {
                 "id": "9a63a392-97cb-4f28-baf3-3a1751b20b50",
@@ -300,6 +308,14 @@
                 "id": "e56e3a3a-3a08-4a12-94c6-c63dbf9a4ef2",
                 "resourcePath": "sprites\\EmptyBarSprite\\EmptyBarSprite.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "77a59765-b4a0-4187-9535-df0722611189",
+            "Value": {
+                "id": "dd5a501c-b57d-4721-9a23-c19373beecc5",
+                "resourcePath": "objects\\OneWayObj\\OneWayObj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -468,6 +484,14 @@
                 "id": "f941606d-8fb8-45e6-8afd-a87955f1cf3b",
                 "resourcePath": "views\\b55d2a48-929c-4644-b032-cc96537b0493.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b9e20912-59d3-4432-990c-d06c34df813d",
+            "Value": {
+                "id": "bd5325e4-8b74-4d81-b5da-5515cf8dd861",
+                "resourcePath": "sprites\\SlopeObjectRight\\SlopeObjectRight.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -644,6 +668,14 @@
                 "id": "8b5a3716-196f-4c49-b125-2d8d3491c9e5",
                 "resourcePath": "sprites\\TombBackgroundSprite\\TombBackgroundSprite.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f15ad8c8-681c-48a9-a397-7c9792f8ad63",
+            "Value": {
+                "id": "03df5682-a171-4498-ac6f-90cbbf093c30",
+                "resourcePath": "objects\\SlopeObjRight\\SlopeObjRight.yy",
+                "resourceType": "GMObject"
             }
         },
         {
