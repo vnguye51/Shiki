@@ -18,6 +18,7 @@ injured = false;
 crouching = true;
 attacking = false;
 jumping = false;
+dodging = false;
 
 //Values in previous frame
 PrevSprite = sprite_index
@@ -29,4 +30,4 @@ PrevSprite = sprite_index
 	key_jump = false;
 	key_jump_pressed = false;
 	key_space = false;
-	key_shift = false;
+	key_shift_pressed = false;

@@ -9,7 +9,7 @@ if control == true
 	key_jump_pressed = keyboard_check_pressed(vk_control);
 	key_space = keyboard_check_pressed(vk_space);
 	
-	key_shift = keyboard_check_pressed(vk_shift)
+	key_shift_pressed = keyboard_check_pressed(vk_shift)
 }
 else
 {
@@ -19,15 +19,25 @@ else
 	key_jump_pressed = false
 	key_down = false
 	key_space = false
-	key_shift = false
+	key_shift_pressed = false
 }
 
 
 //Exception to the loss of control due to attacking. Attacking(space) and Dodging(shift) can be performed earlier than other actions.
-if (attacking == true) and (alarm_get(2) <= 15) 
+if (attacking == true)
 {
-	key_space = keyboard_check_pressed(vk_space)
-	key_shift = keyboard_check_pressed(vk_shift)
+	if (alarm_get(2) <= 15){
+		key_space = keyboard_check_pressed(vk_space)
+	}
+	if (alarm_get(2) <= 25){
+		//Cancel the attack and stop its timers
+		key_shift_pressed = keyboard_check_pressed(vk_shift)
+		if key_shift_pressed{
+			alarm[2] = -1
+			alarm[5] = -1
+			attacking = false
+		}
+	}
 }
 	
 
@@ -127,6 +137,7 @@ else
 	crouching = false
 }
 //=======================================================
+///Attacking Logic
 if (key_space == true and grounded == true)
 {
 	move = 0
@@ -139,6 +150,25 @@ if (key_space == true and grounded == true)
 		
 }
 
+//Dodging Logic
+if (key_shift_pressed == true and grounded == true)
+{
+	dodging = true
+	control = false
+	alarm[3] = 21
+}
+
+if dodging{
+	if image_xscale == 1{
+		hsp = -5 + power(21-alarm_get(3),2)/441*5
+	}
+	else{
+		hsp = 5 - power(21-alarm_get(3),2)/441*5
+	}
+	show_debug_message(hsp)
+	//Dodging can be stopped or triggered by other means than the above
+	
+}
 //Horizontal Collision
 if (place_meeting(x+hsp,y,WallObj))
 {	
@@ -370,9 +400,12 @@ if (alive == true)
 
 	else 
 	{
-		if (attacking == true)
-		sprite_index = PlayerAttackSprite
-		
+		if (attacking == true){
+			sprite_index = PlayerAttackSprite
+		}
+		else if (dodging == true){
+			sprite_index = PlayerBackstepSprite
+		}
 		
 		else if (crouching == true)
 		{
@@ -401,8 +434,12 @@ if (alive == true)
 						sprite_index = PlayerIdleSprite
 					}
 				}
-				else
-				{
+				else if (sprite_index == PlayerBackstepSprite){
+					if (image_index == 7){
+						sprite_index = PlayerIdleSprite
+					}
+				}
+				else{
 					sprite_index = PlayerIdleSprite
 				}
 			}
