@@ -57,9 +57,11 @@ if (place_meeting(x,y+3,CollisionObj))
 		audio_play_sound(StepSFX,0,0)
 		}
 		grounded = true
+		jumps_left = 2
 	}
 	if (key_jump_pressed == true and key_down == false and grounded == true) //initialize jumping
 	{
+		jumps_left += -1
 		jumping = true
 		alarm[4] = 15
 	}
@@ -75,9 +77,11 @@ else if OneWay != noone
 		audio_play_sound(StepSFX,0,0)
 		}
 		grounded = true
+		jumps_left = 2
 	}
 	if (key_jump_pressed == true) and key_down == false and grounded == true //initialize jumping
 	{
+		jumps_left += -1
 		jumping = true
 		alarm[4] = 15
 	}
@@ -85,6 +89,12 @@ else if OneWay != noone
 
 else 
 {
+	if key_jump_pressed and jumps_left > 0
+	{
+		jumps_left += -1
+		jumping = true
+		alarm[4] = 15
+	}
 	grounded = false
 }
 
@@ -103,6 +113,7 @@ if (jumping == true)
 		vsp = 0
 	}
 }
+
 //==================================================
 //key_down takes precedence over movement while on the ground
 if (key_down == true and grounded == true)
@@ -180,7 +191,22 @@ if OneWay != noone
 }
 	 
 	
-		
+//Moving Platform Collision
+var MovingPlatform = instance_place(x,y+1,MovingPlatformObj)
+if MovingPlatform != noone
+{
+	if grounded == true
+	{
+		if (MovingPlatform.path_position < 0.999 and MovingPlatform.path_position > 0.001)
+		{
+			hsp += MovingPlatform.path_speed
+		}
+		else{
+			show_debug_message("correction")
+			hsp += MovingPlatform.path_speed*-1
+		}
+	}
+}
 
 //Slope Collision
 //LeftSlope Collision
@@ -323,10 +349,18 @@ if (alive == true)
 	
 	else if (grounded == false)
 	{
-	
+		if(move == 1){
+			image_xscale = 1
+		}
+		else if (move == -1){
+			image_xscale = -1
+		}
 		if (sign(vsp) > 0)
 		{
 			sprite_index = PlayerFallSprite
+			if (image_index == 8){
+				image_index = 6
+			}
 		}
 		else
 		{

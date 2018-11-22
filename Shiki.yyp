@@ -47,6 +47,22 @@
             }
         },
         {
+            "Key": "0c06513d-3713-4bef-838e-e785d38730fd",
+            "Value": {
+                "id": "4f1b8009-c2cc-433f-936c-01a5817bf18c",
+                "resourcePath": "sprites\\MovingPlatformSprite\\MovingPlatformSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "0f05fe55-bb7a-4ed1-8b60-2dcc7a0bf397",
+            "Value": {
+                "id": "1fb13acd-c0ca-49bc-97a2-3ec2143277b1",
+                "resourcePath": "paths\\path0\\path0.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "19c50017-002f-430a-9979-b083c8f0f2a9",
             "Value": {
                 "id": "87c53ed1-feba-449a-a86d-1fe76603b19d",
@@ -132,6 +148,14 @@
                 "id": "7791f22b-4658-421e-91b2-8130796ea93c",
                 "resourcePath": "sprites\\PlayerJumpSprite\\PlayerJumpSprite.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3240795c-3160-4cc9-9c34-2988b5f42222",
+            "Value": {
+                "id": "fb9c5972-74d1-4498-ac69-41e0ee44fa38",
+                "resourcePath": "objects\\MovingPlatformObj\\MovingPlatformObj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
