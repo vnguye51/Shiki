@@ -67,11 +67,10 @@ if (place_meeting(x,y+3,CollisionObj))
 		audio_play_sound(StepSFX,0,0)
 		}
 		grounded = true
-		jumps_left = 2
+		jumps_left = 1
 	}
 	if (key_jump_pressed == true and key_down == false and grounded == true) //initialize jumping
 	{
-		jumps_left += -1
 		jumping = true
 		alarm[4] = 15
 	}
@@ -87,11 +86,13 @@ else if OneWay != noone
 		audio_play_sound(StepSFX,0,0)
 		}
 		grounded = true
-		jumps_left = 2
+		jumps_left = 1
 	}
-	if (key_jump_pressed == true) and key_down == false and grounded == true //initialize jumping
+	if (key_jump_pressed == true) and key_down == false //initialize jumping
 	{
-		jumps_left += -1
+		if grounded == false{
+			jumps_left += -1
+		}
 		jumping = true
 		alarm[4] = 15
 	}
@@ -155,38 +156,36 @@ if (key_shift_pressed == true and grounded == true)
 {
 	dodging = true
 	control = false
-	alarm[3] = 21
+	alarm[3] = 27
 }
 
 if dodging{
 	if image_xscale == 1{
-		hsp = -5 + power(21-alarm_get(3),2)/441*5
+		hsp = -5 + power(27-alarm_get(3),2)/729*5
 	}
 	else{
-		hsp = 5 - power(21-alarm_get(3),2)/441*5
+		hsp = 5 - power(27-alarm_get(3),2)/729*5
 	}
-	show_debug_message(hsp)
 	//Dodging can be stopped or triggered by other means than the above
-	
 }
 //Horizontal Collision
 if (place_meeting(x+hsp,y,WallObj))
 {	
-	while(not place_meeting(x+sign(hsp),y,WallObj))
-	{
-		x += sign(hsp);
-	}
-	hsp = 0;
-}
-
-//Corner forgiveness
-if (place_meeting(x,y,OneWayObj))
-{
-	if not place_meeting(x,y-1,OneWayObj)
+	//Corner forgiveness
+	if not (place_meeting(x+hsp,y-1,CollisionObj) or place_meeting(x+hsp,y-1,OneWayObj))
 	{
 		y += -1
 	}
+	else{	
+		while(not place_meeting(x+sign(hsp),y,WallObj))
+		{
+			x += sign(hsp);
+		}
+		hsp = 0;
+	}
 }
+
+
 
 //Vertical Collision
 if (place_meeting(x,y+vsp,WallObj))
@@ -263,12 +262,13 @@ if (place_meeting(x,y+vsp,SlopeObj) and key_jump == false)
 	else if (move == -1)
 	{
 		hsp = -2
-		while(not place_meeting(x+hsp,y+1,SlopeObj) and (not place_meeting(x+hsp,y+1,WallObj)))
+		while(not place_meeting(x+hsp,y+1,SlopeObj) and (not place_meeting(x+hsp,y+1,WallObj)) and (not place_meeting(x+hsp,y+1,OneWayObj)))
 		{
 			y += 1;
 		}
 	}
-	if (place_meeting(x+hsp,y,WallObj))
+	if (place_meeting(x+hsp,y,WallObj) and (not place_meeting(x+hsp,y-2,WallObj)))
+	//Adds some forgiveness to get on top of a nearby wallobject when coming off a slope
 	{
 		while(place_meeting(x+hsp,y,WallObj))
 		{
@@ -287,6 +287,7 @@ if (place_meeting(x+hsp,y,SlopeObj))
 
 //Right Slope Collision
 if (grounded and move == 1 and place_meeting(x+hsp, y+4,SlopeObjRight) and key_jump == false)
+//If moving down the slope
 {
 	while(not place_meeting(x+hsp,y+1,SlopeObjRight))
 	{
@@ -294,7 +295,7 @@ if (grounded and move == 1 and place_meeting(x+hsp, y+4,SlopeObjRight) and key_j
 	}
 	vsp = 0
 }
-
+//If there is a collision downwards
 if (place_meeting(x,y+vsp,SlopeObjRight) and key_jump == false)
 {
 	while(not place_meeting(x,y+sign(vsp),SlopeObjRight))
@@ -303,18 +304,20 @@ if (place_meeting(x,y+vsp,SlopeObjRight) and key_jump == false)
 	}
 	vsp = 0;
 	if (move == -1)
+	//if moving up the slope
 	{
 		hsp = -2
 	}
 	else if (move == 1)
+	//if moving down the slope
 	{
 		hsp = 2
-		while(not place_meeting(x+hsp,y+1,SlopeObjRight) and (not place_meeting(x+hsp,y+1,WallObj)))
+		while(not place_meeting(x+hsp,y+1,SlopeObjRight) and (not place_meeting(x+hsp,y+1,WallObj)) and (not place_meeting(x+hsp,y+1,OneWayObj)))
 		{
 			y += 1;
 		}
 	}
-	if (place_meeting(x+hsp,y,WallObj))
+	if (place_meeting(x+hsp,y,WallObj) and (not place_meeting(x+hsp,y-2,WallObj)))
 	{
 		while(place_meeting(x+hsp,y,WallObj))
 		{

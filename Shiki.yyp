@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "0f555ac0-e255-44af-9267-b0963412aaa5",
+            "Value": {
+                "id": "29d849d0-dda0-4e71-993e-e1b2f3909870",
+                "resourcePath": "views\\0f555ac0-e255-44af-9267-b0963412aaa5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "19c50017-002f-430a-9979-b083c8f0f2a9",
             "Value": {
                 "id": "87c53ed1-feba-449a-a86d-1fe76603b19d",
@@ -292,6 +300,14 @@
                 "id": "654387d8-219a-49ad-832a-4836a9289072",
                 "resourcePath": "sprites\\ManaBarSprite\\ManaBarSprite.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6f94455a-9428-473f-b35e-8e8f22a50e71",
+            "Value": {
+                "id": "086f4af6-744e-4de3-a209-669fb853d92c",
+                "resourcePath": "objects\\Boulder\\Boulder.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -4,7 +4,7 @@ vsp = 0;
 jumpspeed = 7;
 movespeed = 3;
 
-jumps_left = 2
+jumps_left = 1
 
 mp = 0
 hp = 50
