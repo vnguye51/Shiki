@@ -8,8 +8,8 @@ if control == true
 	key_jump = keyboard_check(vk_control);
 	key_jump_pressed = keyboard_check_pressed(vk_control);
 	key_space = keyboard_check_pressed(vk_space);
-	
-	key_shift_pressed = keyboard_check_pressed(vk_shift)
+	key_control_pressed = keyboard_check_pressed(vk_control);
+	key_shift_pressed = keyboard_check_pressed(vk_shift);
 }
 else
 {
@@ -133,7 +133,7 @@ if (key_down == true and grounded == true)
 	hsp = 0
 	crouching = true
 }
-else
+else if sliding == false
 {
 	crouching = false
 }
@@ -165,6 +165,25 @@ if dodging{
 	}
 	else{
 		hsp = 5 - power(27-alarm_get(3),2)/729*5
+	}
+	//Dodging can be stopped or triggered by other means than the above
+}
+
+//Sliding Logic
+if (grounded == true and crouching == true and key_control_pressed)
+{
+	crouching = false
+	sliding = true
+	control = false
+	alarm[6] = 27
+}
+
+if sliding{
+	if image_xscale == 1{
+		hsp = 5 - power(27-alarm_get(6),2)/729*5
+	}
+	else{
+		hsp = -5 + power(27-alarm_get(6),2)/729*5
 	}
 	//Dodging can be stopped or triggered by other means than the above
 }
@@ -239,7 +258,7 @@ if MovingPlatform != noone
 
 //Slope Collision
 //LeftSlope Collision
-if (grounded and hsp < 0 and place_meeting(x+hsp, y+6,SlopeObj) and key_jump == false)
+if (grounded and hsp < 0 and place_meeting(x+hsp, y+6,SlopeObj) and jumping == false)
 {
 	while(not place_meeting(x+hsp,y+1,SlopeObj))
 	{
@@ -286,8 +305,9 @@ if (place_meeting(x+hsp,y,SlopeObj))
 }
 
 //Right Slope Collision
+show_debug_message(grounded)
 show_debug_message(hsp)
-if (grounded and hsp > 0 and place_meeting(x+hsp, y+6,SlopeObjRight) and key_jump == false)
+if (grounded and hsp > 0 and place_meeting(x+hsp, y+6,SlopeObjRight) and jumping == false)
 //If moving down the slope
 {
 	while(not place_meeting(x+hsp,y+1,SlopeObjRight))
@@ -369,7 +389,6 @@ if (place_meeting(x,y,EnemyObj)) //Might want to move this code into the enemy l
 PrevSprite = sprite_index
 image_speed = 1
 
-
 if (alive == true) 
 {	if injured == true
 	{  
@@ -414,10 +433,16 @@ if (alive == true)
 		else if (crouching == true)
 		{
 			sprite_index = PlayerCrouchSprite
-			if (image_index = 4)
+			if PrevSprite == PlayerSlideSprite{
+				image_index = 3
+			}
+			if (image_index == 3) 
 			{
 				image_speed = 0
 			}
+		}
+		else if (sliding == true){
+			sprite_index = PlayerSlideSprite
 		}
 		else if (move == 1)
 		{
@@ -441,6 +466,11 @@ if (alive == true)
 				else if (sprite_index == PlayerBackstepSprite){
 					if (image_index == 7){
 						sprite_index = PlayerIdleSprite
+					}
+				}
+				else if (sprite_index == PlayerSlideSprite){
+					if (image_index == 7){
+						sprite_index = PlayerCrouchSprite
 					}
 				}
 				else{

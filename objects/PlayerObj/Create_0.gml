@@ -19,7 +19,7 @@ crouching = true;
 attacking = false;
 jumping = false;
 dodging = false;
-
+sliding = false;
 //Values in previous frame
 PrevSprite = sprite_index
 
@@ -31,3 +31,4 @@ PrevSprite = sprite_index
 	key_jump_pressed = false;
 	key_space = false;
 	key_shift_pressed = false;
+	key_control_pressed = false;
