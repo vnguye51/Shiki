@@ -168,6 +168,7 @@ if dodging{
 	}
 	//Dodging can be stopped or triggered by other means than the above
 }
+
 //Horizontal Collision
 if (place_meeting(x+hsp,y,WallObj))
 {	
@@ -231,7 +232,6 @@ if MovingPlatform != noone
 			hsp += MovingPlatform.path_speed
 		}
 		else{
-			show_debug_message("correction")
 			hsp += MovingPlatform.path_speed*-1
 		}
 	}
@@ -239,7 +239,7 @@ if MovingPlatform != noone
 
 //Slope Collision
 //LeftSlope Collision
-if (grounded and move == -1 and place_meeting(x+hsp, y+4,SlopeObj) and key_jump == false)
+if (grounded and hsp < 0 and place_meeting(x+hsp, y+6,SlopeObj) and key_jump == false)
 {
 	while(not place_meeting(x+hsp,y+1,SlopeObj))
 	{
@@ -286,7 +286,8 @@ if (place_meeting(x+hsp,y,SlopeObj))
 }
 
 //Right Slope Collision
-if (grounded and move == 1 and place_meeting(x+hsp, y+4,SlopeObjRight) and key_jump == false)
+show_debug_message(hsp)
+if (grounded and hsp > 0 and place_meeting(x+hsp, y+6,SlopeObjRight) and key_jump == false)
 //If moving down the slope
 {
 	while(not place_meeting(x+hsp,y+1,SlopeObjRight))
