@@ -27,6 +27,7 @@ PrevSprite = sprite_index
 	key_right = false;
 	key_left = false;
 	key_down = false;
+	key_up = false;
 	key_jump = false;
 	key_jump_pressed = false;
 	key_space = false;

@@ -1,0 +1,1 @@
+dialog = ["I see you have awoken.", "It appears the end has come."]

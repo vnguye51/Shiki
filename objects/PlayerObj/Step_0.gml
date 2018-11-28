@@ -5,6 +5,7 @@ if control == true
 	key_right = keyboard_check(vk_right);
 	key_left = -keyboard_check(vk_left);
 	key_down = keyboard_check(vk_down);
+	key_up = keyboard_check(vk_up)
 	key_jump = keyboard_check(vk_control);
 	key_jump_pressed = keyboard_check_pressed(vk_control);
 	key_space = keyboard_check_pressed(vk_space);
@@ -16,6 +17,7 @@ else
 	key_right = false
 	key_left = false
 	key_jump = false
+	key_up = false
 	key_jump_pressed = false
 	key_down = false
 	key_space = false
@@ -305,8 +307,6 @@ if (place_meeting(x+hsp,y,SlopeObj))
 }
 
 //Right Slope Collision
-show_debug_message(grounded)
-show_debug_message(hsp)
 if (grounded and hsp > 0 and place_meeting(x+hsp, y+6,SlopeObjRight) and jumping == false)
 //If moving down the slope
 {
@@ -354,6 +354,11 @@ if (place_meeting(x+hsp,y,SlopeObjRight))
 	{
 		y += -1;
 	}
+}
+
+if grounded and key_up and (place_meeting(x+30,y,BaseNPCObj)){
+	control = false
+	DialogScript(BaseNPCObj.dialog,0.5)
 }
 
 x += hsp;
@@ -490,7 +495,7 @@ else
 	}
 }
 
-if (PrevSprite != sprite_index) //Frame is reset to 0 if image is changed
-{
-	image_index = 0
-}
+//if (PrevSprite != sprite_index) //Frame is reset to 0 if image is changed
+//{
+//	image_index = 0
+//}
