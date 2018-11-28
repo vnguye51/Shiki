@@ -356,9 +356,11 @@ if (place_meeting(x+hsp,y,SlopeObjRight))
 	}
 }
 
+
+////Interact with NPC(and possibly other objects)
 if grounded and key_up and (place_meeting(x+30,y,BaseNPCObj)){
 	control = false
-	DialogScript(BaseNPCObj.dialog,0.5)
+	DialogScript(BaseNPCObj.dialog,0.5,Test1,Test2)
 }
 
 x += hsp;

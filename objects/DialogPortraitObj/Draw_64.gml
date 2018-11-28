@@ -1,0 +1,1 @@
+draw_sprite_ext(char_sprite,0,char_sprite_x,char_sprite_y,image_xscale,1,0,col,1)
