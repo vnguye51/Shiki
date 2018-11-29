@@ -9,7 +9,8 @@
         "6cd163fc-1924-401f-8532-0d002a7a22aa",
         "f15ad8c8-681c-48a9-a397-7c9792f8ad63",
         "77a59765-b4a0-4187-9535-df0722611189",
-        "3240795c-3160-4cc9-9c34-2988b5f42222"
+        "3240795c-3160-4cc9-9c34-2988b5f42222",
+        "b953a0dc-95d9-46fa-8e3f-f15d48ddd7f9"
     ],
     "filterType": "GMObject",
     "folderName": "Collision",

@@ -9,7 +9,7 @@ jumps_left = 1
 mp = 0
 hp = 50
 
-grounded = false;
+grounded = true;
 on_slope = false;
 invuln = false;
 control = true;

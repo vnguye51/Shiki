@@ -172,7 +172,7 @@ if dodging{
 }
 
 //Sliding Logic
-if (grounded == true and crouching == true and key_control_pressed)
+if (grounded == true and crouching == true and key_control_pressed and OneWay == noone)
 {
 	crouching = false
 	sliding = true
