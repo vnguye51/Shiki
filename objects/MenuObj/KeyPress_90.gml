@@ -1,3 +1,8 @@
+/// @description confirm
+if index == 1 {
+	subindex = 0
+	submenu = true
+}
 if index == 4 {
 	LoadData()
 	pause = false
