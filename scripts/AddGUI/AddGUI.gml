@@ -1,0 +1,6 @@
+instance_create_depth(15,10,1,BarBackObj)
+instance_create_depth(15,15,1,BarBackObj)
+instance_create_depth(15,10,1,EmptyBarObj)
+instance_create_depth(15,15,1,EmptyBarObj)
+instance_create_depth(18,10,0,HealthBarObj)
+instance_create_depth(18,15,0,ManaBarObj)

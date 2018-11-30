@@ -1,3 +1,7 @@
+if !persistent{
+	persistent = true;
+}
+
 grav = 0.2
 hsp = 0;
 vsp = 0;
@@ -6,8 +10,8 @@ movespeed = 3;
 
 jumps_left = 1
 
-mp = 0
-hp = 50
+mp = 100
+hp = 100
 
 grounded = true;
 on_slope = false;

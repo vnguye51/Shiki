@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "STARTobj",
     "eventList": [
-        
+        {
+            "id": "12715f6a-52d9-45b9-b296-44eed3e28782",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "50aa0b43-1232-46b0-a9c2-651e6cdfa99b"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

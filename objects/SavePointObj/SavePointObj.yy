@@ -1,18 +1,18 @@
 {
-    "id": "ae600e51-d41d-4dc8-a363-f33f1edd28ee",
+    "id": "9458d248-82aa-49fa-941d-2d95ae13a747",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "SHIKIobj",
+    "name": "SavePointObj",
     "eventList": [
         {
-            "id": "f0554888-e9d9-4604-94a9-a38c9b9eddbe",
+            "id": "ac5303c7-2733-4bc9-82a7-19020bf8ceeb",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "ae600e51-d41d-4dc8-a363-f33f1edd28ee"
+            "eventtype": 3,
+            "m_owner": "9458d248-82aa-49fa-941d-2d95ae13a747"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -33,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "a3047115-3d36-45bb-b258-f8fe2891aa44",
+    "spriteId": "5e63070a-21ba-4dc4-bd21-c1dd23d85dd2",
     "visible": true
 }

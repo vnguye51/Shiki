@@ -1,19 +1,10 @@
 {
-    "id": "ae600e51-d41d-4dc8-a363-f33f1edd28ee",
+    "id": "3aced3ff-a4c6-48c6-90f9-c964fb6f6dea",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "SHIKIobj",
+    "name": "Background",
     "eventList": [
-        {
-            "id": "f0554888-e9d9-4604-94a9-a38c9b9eddbe",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "ae600e51-d41d-4dc8-a363-f33f1edd28ee"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -33,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "a3047115-3d36-45bb-b258-f8fe2891aa44",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }
