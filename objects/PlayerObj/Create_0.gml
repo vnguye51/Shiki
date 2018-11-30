@@ -12,6 +12,8 @@ jumps_left = 1
 
 mp = 100
 hp = 100
+maxmp = 100
+maxhp = 100
 
 grounded = true;
 on_slope = false;

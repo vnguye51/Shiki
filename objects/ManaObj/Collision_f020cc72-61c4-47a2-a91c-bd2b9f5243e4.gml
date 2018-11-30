@@ -2,7 +2,7 @@
 // You can write your code in this editor
 with (PlayerObj)
 {
-	mp += 10
+	mp = min(mp+10,maxmp)
 }
 
 instance_destroy()
