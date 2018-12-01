@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "25182c66-3640-40dc-bd00-9b02b5785733",
+            "Value": {
+                "id": "ae031671-e01e-45fc-a2de-2946b562aceb",
+                "resourcePath": "views\\25182c66-3640-40dc-bd00-9b02b5785733.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "265ce0aa-c30b-4c72-85d1-57fd99fb9be1",
             "Value": {
                 "id": "ebc1184c-e4ae-4da0-8a59-87378ec9c4cf",
@@ -719,14 +727,6 @@
             }
         },
         {
-            "Key": "aa289bf9-13c8-4072-b63a-c0bbd384ba10",
-            "Value": {
-                "id": "4fb8e4c4-a19d-4162-8e4b-3243d7c30337",
-                "resourcePath": "objects\\MenuBackgroundObj\\MenuBackgroundObj.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "ad8f3635-12e1-4076-a9f2-2409f69cb352",
             "Value": {
                 "id": "ee4ed102-e792-44a3-94d7-d466674e5865",
@@ -823,6 +823,14 @@
             }
         },
         {
+            "Key": "c57396e9-ee0f-4523-808b-19f0865abb39",
+            "Value": {
+                "id": "81708487-9a60-4871-aca6-dec25bc4ed16",
+                "resourcePath": "sprites\\ItemPlatformSprite\\ItemPlatformSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c7ee6808-88ae-45d2-ae0a-b5dd14525e1a",
             "Value": {
                 "id": "34b937de-85ad-447b-b028-babab59c78c1",
@@ -868,6 +876,14 @@
                 "id": "3f5d13f8-3e82-414f-af58-5b2badbd2a33",
                 "resourcePath": "objects\\HealthObj\\HealthObj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ce1766f3-8df8-487f-a777-e160907c79d8",
+            "Value": {
+                "id": "c629bd2a-86e5-4f65-9a24-99b04ed2a9f4",
+                "resourcePath": "sprites\\HealthPotionSprite\\HealthPotionSprite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -967,6 +983,14 @@
             }
         },
         {
+            "Key": "e3bee1ad-331e-45bb-8623-6fed47ab6e26",
+            "Value": {
+                "id": "6642196b-d5f9-4500-95e4-7dad5b5e37d1",
+                "resourcePath": "sprites\\ManaPotionSprite\\ManaPotionSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e7fb142b-ecb0-45b7-9636-8dfe2d955317",
             "Value": {
                 "id": "7e8ec837-b74c-4d15-aec3-69d41e348d5d",
@@ -996,6 +1020,14 @@
                 "id": "81ab9b3e-891e-43f0-8fcf-f0059a5d4d5f",
                 "resourcePath": "rooms\\room0\\room0.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "ec9afda4-4265-42f1-9c39-969d9aef3ee0",
+            "Value": {
+                "id": "0f70e8aa-9867-491d-be5e-a65fcfc49fdf",
+                "resourcePath": "sprites\\MenuDividerSprite\\MenuDividerSprite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

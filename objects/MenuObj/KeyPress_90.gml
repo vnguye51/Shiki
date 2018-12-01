@@ -27,3 +27,4 @@ if pause{
 		UseItem(string_letters(curr_item_info[? "name"]))
 	}
 }
+
