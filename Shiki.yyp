@@ -87,11 +87,27 @@
             }
         },
         {
+            "Key": "0fc54927-1757-4925-bdcf-945ca58de811",
+            "Value": {
+                "id": "b9a667f2-6597-4ee2-a45b-0cb25891b003",
+                "resourcePath": "scripts\\UseItem\\UseItem.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "10fdd5ef-2ac3-441a-a283-5e5a9c155d21",
             "Value": {
                 "id": "c780c12e-dbdd-440c-b484-a532121290e8",
                 "resourcePath": "views\\d8bc8107-fb75-4415-b653-7984e277a1a1-room.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "13884c25-71e0-4c38-bb44-fbb31cb69cb2",
+            "Value": {
+                "id": "2810759f-222c-4712-b5fb-79826f494ccd",
+                "resourcePath": "scripts\\HealthPotion\\HealthPotion.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -743,6 +759,14 @@
             }
         },
         {
+            "Key": "b5bc8f34-8d22-4128-a094-a570dc97be4c",
+            "Value": {
+                "id": "ce9410be-9dbd-45fa-aa61-a57ea306c0ff",
+                "resourcePath": "scripts\\ManaPotion\\ManaPotion.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b953a0dc-95d9-46fa-8e3f-f15d48ddd7f9",
             "Value": {
                 "id": "1287d3d3-058b-45ec-b2cd-9661bcef198d",
@@ -756,6 +780,14 @@
                 "id": "bd5325e4-8b74-4d81-b5da-5515cf8dd861",
                 "resourcePath": "sprites\\SlopeObjectRight\\SlopeObjectRight.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bb506478-c2fe-4414-b37e-7ad2a6f9afa8",
+            "Value": {
+                "id": "0472bfd4-ee82-463b-8827-53fe8d7a5cae",
+                "resourcePath": "views\\bb506478-c2fe-4414-b37e-7ad2a6f9afa8.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -860,6 +892,14 @@
                 "id": "b396c0f5-2efd-48a4-bc55-0adc14aedbd1",
                 "resourcePath": "sprites\\NpcSprite\\NpcSprite.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d622a8bd-0fd2-46b2-b1e1-870df3de64a6",
+            "Value": {
+                "id": "19716504-f986-4cd7-80a4-40a77aaa966e",
+                "resourcePath": "views\\d622a8bd-0fd2-46b2-b1e1-870df3de64a6.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1083,6 +1123,9 @@
         "38ff7596-0f47-4263-bb21-8dc7931549a1",
         "dad5cfa6-4d90-45d4-831b-dc032e650e97",
         "2af1bdf2-e5e8-4db5-ba6b-f73d59a183f1",
+        "0fc54927-1757-4925-bdcf-945ca58de811",
+        "13884c25-71e0-4c38-bb44-fbb31cb69cb2",
+        "b5bc8f34-8d22-4128-a094-a570dc97be4c",
         "bd359dd6-bbea-4f84-bdf4-8fdeacd5c57c",
         "612f3bde-e61c-4206-9b7b-3b15884f359d"
     ],

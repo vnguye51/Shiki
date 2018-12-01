@@ -12,13 +12,13 @@ if pause{
 	i = 0
 	var j = 0
 	if menu_options[index] == "Items" {
-		for (i=0;i<ceil(array_length_1d(items)/2); i += 1){
-			for (j=0 ; j<2 and i*2+j < array_length_1d(items); j += 1){
+		for (i=0;i<ceil(ds_list_size(global.obtained_item_list)/2); i += 1){
+			for (j=0 ; j<2 and i*2+j < ds_list_size(global.obtained_item_list); j += 1){
 				if subindex == i*2+j {
-					draw_text_color(120+80*j,90+20*i,items[i*2+j],c_lime,c_lime,c_green,c_green,1)
+					draw_text_color(120+80*j,90+20*i,global.obtained_item_list[| i*2+j],c_lime,c_lime,c_green,c_green,1)
 				}
 				else {
-					draw_text(120+80*j,90+20*i,items[i*2+j])
+					draw_text(120+80*j,90+20*i,global.obtained_item_list[| i*2+j])
 				}
 			}
 		}

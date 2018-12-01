@@ -10,8 +10,8 @@ movespeed = 3;
 
 jumps_left = 1
 
-mp = 100
-hp = 100
+mp = 50
+hp = 50
 maxmp = 100
 maxhp = 100
 
