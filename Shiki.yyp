@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "1d6a6e8c-4d70-4c9b-ac35-49cc9fc2d468",
+            "Value": {
+                "id": "1d0297e4-c97b-48c5-b9a4-d8c12caec775",
+                "resourcePath": "scripts\\GameStart\\GameStart.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1f9d9f35-4aa9-4462-9bab-b7f6b4a2c065",
             "Value": {
                 "id": "0ec39478-1d6c-4088-9efb-e95acc68d708",
@@ -1159,7 +1167,8 @@
         "13884c25-71e0-4c38-bb44-fbb31cb69cb2",
         "b5bc8f34-8d22-4128-a094-a570dc97be4c",
         "bd359dd6-bbea-4f84-bdf4-8fdeacd5c57c",
-        "612f3bde-e61c-4206-9b7b-3b15884f359d"
+        "612f3bde-e61c-4206-9b7b-3b15884f359d",
+        "1d6a6e8c-4d70-4c9b-ac35-49cc9fc2d468"
     ],
     "tutorial": ""
 }

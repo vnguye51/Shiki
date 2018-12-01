@@ -1,3 +1,5 @@
+//I should probably turn this into a JSON and import it at some point
+
 global.item_map = ds_map_create()
 
 hppot = ds_map_create()

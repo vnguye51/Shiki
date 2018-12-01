@@ -1,5 +1,5 @@
 if index == 0{
-	room_goto_next()
+	GameStart()
 }
 if index == 1{
 	LoadData()
