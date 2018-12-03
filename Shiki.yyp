@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "2da5a2ad-fe28-47b9-8add-c933acf2dd87",
+            "Value": {
+                "id": "3f4d0540-46f1-4dce-be69-65f682c6344e",
+                "resourcePath": "objects\\BladeSpiderObj\\BladeSpiderObj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2ee1d2ae-4086-44db-9f1c-30189955749e",
             "Value": {
                 "id": "f50671fc-85ac-43d1-9938-8a138e2f6848",
@@ -284,6 +292,14 @@
                 "id": "e9c4db21-2e3e-4d99-870d-d13287a0fe88",
                 "resourcePath": "scripts\\DialogScript\\DialogScript.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "390d12a6-1e07-439d-be10-4d41abb6bd08",
+            "Value": {
+                "id": "4792de25-85c1-4293-bab8-1f974b6d9046",
+                "resourcePath": "sprites\\BladeSpiderWalkSprite\\BladeSpiderWalkSprite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -823,6 +839,14 @@
             }
         },
         {
+            "Key": "c0fb9894-0545-4664-832b-c9b5e952cd52",
+            "Value": {
+                "id": "2da17aa9-52d8-4086-97e1-70de56b0c6f1",
+                "resourcePath": "sprites\\BladeSpiderAttack\\BladeSpiderAttack.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c551c6a9-533c-46bf-9d44-3157b958c318",
             "Value": {
                 "id": "06666607-3f17-4ba6-8080-5d43b7ce6a17",
@@ -963,6 +987,14 @@
             "Value": {
                 "id": "030f206c-d2ae-4e3b-bee1-4f6342824e91",
                 "resourcePath": "views\\de1febb9-2a95-4ca1-a4a2-89e3fb531dbe.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "df18f77a-57c4-4aa9-b319-ef7f2653184a",
+            "Value": {
+                "id": "ffe11b9e-fbc4-4fee-ba4e-17076bb9b6cc",
+                "resourcePath": "views\\df18f77a-57c4-4aa9-b319-ef7f2653184a.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -1132,14 +1164,6 @@
                 "id": "3a33d428-65b2-4e58-af3f-5f0a9f5485a4",
                 "resourcePath": "sprites\\PlayerCrouchSprite\\PlayerCrouchSprite.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "f6b81dfa-c1fa-413b-bab6-dc363f7dbf70",
-            "Value": {
-                "id": "82045f1f-75cf-49d5-8e66-702563947147",
-                "resourcePath": "objects\\object31\\object31.yy",
-                "resourceType": "GMObject"
             }
         },
         {

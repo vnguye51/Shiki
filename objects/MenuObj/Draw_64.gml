@@ -10,8 +10,7 @@ if pause{
 			draw_text(15,90+20*i,menu_options[i])
 		}
 	}
-	i = 0
-	var j = 0
+
 	if menu_options[index] == "Items" {
 		draw_sprite(MenuDividerSprite,0,286,75)
 		draw_sprite(ItemPlatformSprite,0,317,88)

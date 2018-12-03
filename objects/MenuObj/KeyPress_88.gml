@@ -16,7 +16,6 @@ else {
 	}
 	else{
 		pause = false
-		layer_destroy_instances("MenuLayer")
 		instance_activate_all()
 	}
 }
