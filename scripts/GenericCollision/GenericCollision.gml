@@ -1,55 +1,3 @@
-if first_creation{
-	first_creation = false
-	if (instance_exists(PlayerObj)){
-		if (PlayerObj.x < x ){
-			image_xscale = -1
-			hsp = -1
-		}
-		else {
-			image_xscale = 1
-			hsp = 1
-		}
-	}
-}
-
-
-if place_meeting(x,y+1,WallObj) and vsp > 0{
-		grounded = true
-}
-else{
-	grounded = false
-}
-
-if state[| 0] == "walking"{
-	if (instance_exists(PlayerObj)){
-		if distance_to_object(PlayerObj) < 80 and sign(PlayerObj.x-x) == sign(image_xscale){
-			ds_list_insert(state,0,"attackprep")
-			alarm[0] = 20
-			image_index = 0
-			sprite_index = BladeSpiderAttack
-			hsp = 0
-		}
-	}
-}
-
-else if state[| 0] == "attackprep" {
-	if image_index == 1{
-		image_speed = 0
-	}
-}
-
-else if state[| 0] == "attacking" {
-	hsp = image_xscale*3
-	vsp = vsp + 0.1
-	if grounded{
-		hsp=0
-		vsp = 0
-		image_speed = 1
-		alarm[1] = 15
-		ds_list_replace(state,0,"idle")
-	}
-}
-
 //Horizontal Collision
 if (place_meeting(x+hsp,y,WallObj))
 {	
@@ -64,10 +12,6 @@ if (place_meeting(x+hsp,y,WallObj))
 			x += sign(hsp);
 		}
 		hsp = 0;
-	}
-	if grounded{
-		image_xscale = image_xscale*-1
-		hsp = image_xscale
 	}
 }
 
@@ -124,15 +68,4 @@ if MovingPlatform != noone
 			hsp += MovingPlatform.path_speed*-1
 		}
 	}
-}
-
-
-
-x += hsp
-y += vsp
-
-//Destroy instance if health is less than 0
-if (hp <= 0)
-{
-	instance_destroy();
 }

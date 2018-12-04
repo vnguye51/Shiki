@@ -181,6 +181,7 @@ if (grounded == true and crouching == true and key_control_pressed and OneWay ==
 }
 
 if sliding{
+	mask_index = PlayerSlideSprite
 	if image_xscale == 1{
 		hsp = 5 - power(27-alarm_get(6),2)/729*5
 	}
