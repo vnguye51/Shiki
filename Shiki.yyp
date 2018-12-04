@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "270fd134-514a-487f-9b17-45288a5034af",
+            "Value": {
+                "id": "e0ab2c7c-e99f-49c2-a77a-79f9fa2cd77c",
+                "resourcePath": "objects\\AttackCollisionObj\\AttackCollisionObj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "27332fae-584b-4788-a14e-652f5f683e77",
             "Value": {
                 "id": "7c359e53-3f00-4122-855a-9c8d4f91c478",
@@ -247,6 +255,14 @@
             }
         },
         {
+            "Key": "2eef1271-5cef-41d4-bab7-1a2c136687b5",
+            "Value": {
+                "id": "0e8193bc-b5c8-486f-8dbf-105b0a043c37",
+                "resourcePath": "objects\\PlayerMagicObj\\PlayerMagicObj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "300fe656-67a5-4874-b9ae-e8d2aafaa28c",
             "Value": {
                 "id": "c6fa843d-27c4-4d34-95f7-b80cd9f74131",
@@ -268,6 +284,14 @@
                 "id": "fb9c5972-74d1-4498-ac69-41e0ee44fa38",
                 "resourcePath": "objects\\MovingPlatformObj\\MovingPlatformObj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "329a9670-fdf0-400b-896d-d2ce54e220d7",
+            "Value": {
+                "id": "201c9f87-c45a-4fb2-99e2-54e4aea93e7c",
+                "resourcePath": "sprites\\LightPillarSprite\\LightPillarSprite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -375,6 +399,14 @@
             }
         },
         {
+            "Key": "4d627722-475d-4d41-82b5-50d9bf681306",
+            "Value": {
+                "id": "d5427510-2292-4bba-b697-2dc33ab4f636",
+                "resourcePath": "sprites\\MagicAttackSprite\\MagicAttackSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "50aa0b43-1232-46b0-a9c2-651e6cdfa99b",
             "Value": {
                 "id": "871a2ded-d7d4-4be2-9980-07f6c5e9fd2e",
@@ -427,6 +459,14 @@
             "Value": {
                 "id": "1d782584-16f3-4921-9782-531901445377",
                 "resourcePath": "views\\5bd99b53-3b4d-462f-9a8d-76551babf161.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5cbb2481-c252-49b1-9b7d-55d5efc004f6",
+            "Value": {
+                "id": "469ebb25-9be3-4457-8b1b-2aafba546a21",
+                "resourcePath": "views\\5cbb2481-c252-49b1-9b7d-55d5efc004f6.yy",
                 "resourceType": "GMFolder"
             }
         },

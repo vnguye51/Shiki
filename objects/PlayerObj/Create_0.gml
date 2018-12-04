@@ -23,6 +23,7 @@ alive = true;
 injured = false;
 crouching = true;
 attacking = false;
+magicattacking = false
 jumping = false;
 dodging = false;
 sliding = false;
@@ -37,5 +38,7 @@ PrevSprite = sprite_index
 	key_jump = false;
 	key_jump_pressed = false;
 	key_space = false;
+	key_z_pressed = false;
 	key_shift_pressed = false;
 	key_control_pressed = false;
+	

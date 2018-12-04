@@ -6,6 +6,7 @@ if control == true
 	key_left = -keyboard_check(vk_left);
 	key_down = keyboard_check(vk_down);
 	key_up = keyboard_check(vk_up)
+	key_z_pressed = keyboard_check_pressed(ord("Z"))
 	key_jump = keyboard_check(vk_control);
 	key_jump_pressed = keyboard_check_pressed(vk_control);
 	key_space = keyboard_check_pressed(vk_space);
@@ -22,11 +23,12 @@ else
 	key_down = false
 	key_space = false
 	key_shift_pressed = false
+	key_z_pressed = false
 }
 
 
 //Exception to the loss of control due to attacking. Attacking(space) and Dodging(shift) can be performed earlier than other actions.
-if (attacking == true)
+if (attacking == true or magicattacking == true)
 {
 	if (alarm_get(2) <= 15){
 		key_space = keyboard_check_pressed(vk_space)
@@ -38,6 +40,7 @@ if (attacking == true)
 			alarm[2] = -1
 			alarm[5] = -1
 			attacking = false
+			magicattacking = false
 		}
 	}
 }
@@ -151,6 +154,17 @@ if (key_space == true and grounded == true)
 	alarm[5] = 12 //Attack starts on the 3rd frame, game speed is 60fps animation speed is 15fps
 	image_index = 0
 		
+}
+//=======================================================
+///MagicAttacking Logic
+if key_z_pressed == true and grounded == true{
+	move = 0
+	hsp = 0
+	magicattacking = true
+	control = false
+	alarm[2] = 30
+	image_index = 0
+	instance_create_depth(x+50*image_xscale,y-94,0,PlayerMagicObj)
 }
 
 //Dodging Logic
@@ -433,6 +447,9 @@ if (alive == true)
 	{
 		if (attacking == true){
 			sprite_index = PlayerAttackSprite
+		}
+		else if (magicattacking == true){
+			sprite_index = MagicAttackSprite
 		}
 		else if (dodging == true){
 			sprite_index = PlayerBackstepSprite
