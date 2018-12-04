@@ -1,5 +1,5 @@
 //Inputs
-
+mask_index = PlayerIdleSprite
 if control == true
 {
 	key_right = keyboard_check(vk_right);
@@ -441,6 +441,7 @@ if (alive == true)
 		else if (crouching == true)
 		{
 			sprite_index = PlayerCrouchSprite
+			mask_index = PlayerCrouchSprite
 			if PrevSprite == PlayerSlideSprite{
 				image_index = 3
 			}
@@ -451,6 +452,7 @@ if (alive == true)
 		}
 		else if (sliding == true){
 			sprite_index = PlayerSlideSprite
+			mask_index = PlayerSlideSprite
 		}
 		else if (move == 1)
 		{
