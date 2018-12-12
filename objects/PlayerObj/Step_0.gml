@@ -77,7 +77,7 @@ if (place_meeting(x,y+3,CollisionObj))
 	if (key_jump_pressed == true and key_down == false and grounded == true) //initialize jumping
 	{
 		jumping = true
-		alarm[4] = 15
+		alarm[4] = 12
 	}
 }  
 
@@ -99,7 +99,7 @@ else if OneWay != noone
 			jumps_left += -1
 		}
 		jumping = true
-		alarm[4] = 15
+		alarm[4] = 12
 	}
 }  
 
@@ -109,7 +109,7 @@ else
 	{
 		jumps_left += -1
 		jumping = true
-		alarm[4] = 15
+		alarm[4] = 12
 	}
 	grounded = false
 }
@@ -388,6 +388,13 @@ if (place_meeting(x,y,EnemyObj)) //Might want to move this code into the enemy l
 	if invuln == false
 	{
 		invuln = true
+		attacking = false
+		magicattacking = false
+		alarm[2] = -1
+		alarm[7]= -1
+		var text = instance_create_depth(x-5,y-5,1,DamageTextObj)
+		text.damage = 10
+		text.color = c_red
 		hp = max(hp-10,0)
 		if hp <= 0
 		{
@@ -409,10 +416,12 @@ if (place_meeting(x,y,EnemyObj)) //Might want to move this code into the enemy l
 
 // ANIMATIONS//
 PrevSprite = sprite_index
-image_speed = 1
+
 
 if (alive == true) 
-{	if injured == true
+{	
+	image_speed = 1
+	if injured == true
 	{  
 		sprite_index = PlayerInjurySprite
 		if (image_index ==  3)
@@ -509,11 +518,16 @@ if (alive == true)
 
 else
 {
-	
-	sprite_index = PlayerDeathSprite
+	image_speed = 0.5
+	if sprite_index != PlayerDeathSprite{
+		alarm[7] = 300
+		sprite_index = PlayerDeathSprite
+		image_index = 0
+	}
 	if (image_index ==  18)
 	{
 		image_speed = 0
+		image_index = 18
 	}
 }
 
