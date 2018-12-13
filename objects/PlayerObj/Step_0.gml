@@ -67,9 +67,9 @@ if (place_meeting(x,y+3,CollisionObj))
 {
 	if(vsp > 0)
 	{
-		if grounded == false
-		{
-		audio_play_sound(StepSFX,0,0)
+		if grounded == false{
+			audio_play_sound(StepSFX,0,0)
+			attacking = false
 		}
 		grounded = true
 		jumps_left = 1
@@ -144,16 +144,23 @@ else if sliding == false
 }
 //=======================================================
 ///Attacking Logic
-if (key_space == true and grounded == true)
+if (key_space == true)
 {
-	move = 0
-	hsp = 0
-	attacking = true
-	control = false
-	alarm[2] = 30
-	alarm[5] = 12 //Attack starts on the 3rd frame, game speed is 60fps animation speed is 15fps
-	image_index = 0
-		
+	if grounded{
+		hsp = 0
+		move = 0
+		control = false
+		attacking = true
+		alarm[2] = 30
+		alarm[5] = 12 //Attack starts on the 3rd frame, game speed is 60fps animation speed is 15fps
+		image_index = 0
+	}
+	else if alarm[2] <= 0{
+		attacking = true
+		alarm[2] = 30
+		alarm[5] = 12
+		image_index = 0
+	}
 }
 //=======================================================
 ///MagicAttacking Logic
@@ -383,7 +390,7 @@ y += vsp;
 
 
 
-if (place_meeting(x,y,EnemyObj)) //Might want to move this code into the enemy later
+if (place_meeting(x,y,DamagingObj)) //Might want to move this code into the enemy later
 {
 	if invuln == false
 	{
@@ -433,22 +440,30 @@ if (alive == true)
 	
 	else if (grounded == false)
 	{
-		if(move == 1){
-			image_xscale = 1
-		}
-		else if (move == -1){
-			image_xscale = -1
-		}
-		if (sign(vsp) > 0)
-		{
-			sprite_index = PlayerFallSprite
-			if (image_index == 8){
-				image_index = 6
+		if (attacking == false){
+			if(move == 1){
+				image_xscale = 1
+			}
+			else if (move == -1){
+				image_xscale = -1
+			}
+			if (sign(vsp) > 0)
+			{
+				sprite_index = PlayerFallSprite
+				if (image_index == 8){
+					image_index = 6
+				}
+			}
+			else
+			{
+				sprite_index = PlayerJumpSprite
 			}
 		}
-		else
-		{
-			sprite_index = PlayerJumpSprite
+		else{
+			sprite_index = PlayerJumpAttackSprite
+			if image_index == 5{
+				image_speed = 0
+			}
 		}
 	}
 

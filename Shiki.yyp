@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "38888ace-37db-4336-8dc6-f0f0c0bfc03f",
+            "Value": {
+                "id": "289adc2a-4f36-4ca8-bfab-3b6e1a77acb7",
+                "resourcePath": "views\\38888ace-37db-4336-8dc6-f0f0c0bfc03f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "38b1e040-b452-4461-b189-a9579b5cfb4a",
             "Value": {
                 "id": "045b749d-f880-4798-b39b-ace27eead7b4",
@@ -428,6 +436,14 @@
                 "id": "5374e689-4db4-4fa0-ad6d-703603e87f01",
                 "resourcePath": "views\\4a5a01cb-0ef6-43f7-909d-92d9c53a32e1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "4c213a76-991e-4578-b88e-bda01d41a3dc",
+            "Value": {
+                "id": "3af7fc1b-363c-4bc8-98f3-684f550fcc7e",
+                "resourcePath": "sprites\\PlayerJumpAttackSprite\\PlayerJumpAttackSprite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -663,6 +679,14 @@
             }
         },
         {
+            "Key": "77bd5ad3-f2da-4db4-8502-0840e0776e05",
+            "Value": {
+                "id": "ca2d198e-d96b-4b27-a2ac-3c27ad2d520c",
+                "resourcePath": "views\\77bd5ad3-f2da-4db4-8502-0840e0776e05.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "79b150b7-0a95-4631-a35f-bd457b626b66",
             "Value": {
                 "id": "92970e14-1fe6-4aa5-8017-89e26d6c50ba",
@@ -716,6 +740,14 @@
                 "id": "3a4f0ef7-01dc-4a80-95fd-b86f9e881f58",
                 "resourcePath": "fonts\\Lucida\\Lucida.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "85cf4d23-fefc-465f-beee-c11c8755b3a4",
+            "Value": {
+                "id": "2fb6b337-3098-4e6a-9dc2-7c6a53743c33",
+                "resourcePath": "sprites\\JumpAttackBoxSprite\\JumpAttackBoxSprite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -788,6 +820,14 @@
                 "id": "99c50f4d-6e7e-4a40-82a3-e510eccdba88",
                 "resourcePath": "sprites\\Test1\\Test1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9d25e319-e956-4b6d-8512-c04a698487b8",
+            "Value": {
+                "id": "5f8a0329-63e4-426c-8941-88d04b183b36",
+                "resourcePath": "objects\\HazardBaseObj\\HazardBaseObj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -967,6 +1007,14 @@
             }
         },
         {
+            "Key": "ba8cc1e0-8909-4ba7-bb58-fb756bad1e8d",
+            "Value": {
+                "id": "584ce304-295e-4fff-b90a-4cf8f921a4c1",
+                "resourcePath": "sprites\\ScytheSprite\\ScytheSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bb506478-c2fe-4414-b37e-7ad2a6f9afa8",
             "Value": {
                 "id": "0472bfd4-ee82-463b-8827-53fe8d7a5cae",
@@ -1052,6 +1100,14 @@
                 "id": "34b937de-85ad-447b-b028-babab59c78c1",
                 "resourcePath": "sprites\\HealthBarSprite\\HealthBarSprite.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ca011a41-e741-459f-b5b0-1c799f9e3b06",
+            "Value": {
+                "id": "12e89b98-6a22-4f53-b381-2383de70ad68",
+                "resourcePath": "objects\\DamagingObj\\DamagingObj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1151,6 +1207,14 @@
             }
         },
         {
+            "Key": "d76b5dd0-4345-4ac0-b916-a2037ac5d681",
+            "Value": {
+                "id": "df9c9ba4-4c77-45fe-a795-294d322b0704",
+                "resourcePath": "objects\\ScytheObj\\ScytheObj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d8bc8107-fb75-4415-b653-7984e277a1a1",
             "Value": {
                 "id": "2581e7a0-bb47-4a52-a04b-bf0fdedfe3a6",
@@ -1244,6 +1308,14 @@
                 "id": "f3aae894-94be-4661-a5bb-0d2e1bfb551c",
                 "resourcePath": "sprites\\TextBoxSprite\\TextBoxSprite.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ec119dbc-12ff-4c95-9260-abb11aa2a3cf",
+            "Value": {
+                "id": "2182ebf6-2971-445d-9755-b159e6abfb8a",
+                "resourcePath": "objects\\PlayerJumpAttackObj\\PlayerJumpAttackObj.yy",
+                "resourceType": "GMObject"
             }
         },
         {

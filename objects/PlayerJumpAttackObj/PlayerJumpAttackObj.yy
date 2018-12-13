@@ -1,33 +1,33 @@
 {
-    "id": "2933027c-ab5f-43fe-bc32-a3fb6f491017",
+    "id": "ec119dbc-12ff-4c95-9260-abb11aa2a3cf",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "EnemyObj",
+    "name": "PlayerJumpAttackObj",
     "eventList": [
         {
-            "id": "689cb198-1fed-4ce2-93d7-a9c65236ec59",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "2933027c-ab5f-43fe-bc32-a3fb6f491017"
-        },
-        {
-            "id": "d5392920-f1f3-48b2-8bc5-63a38e8c16a0",
+            "id": "c6c8577a-04ee-4318-886a-f86d95f24712",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "2933027c-ab5f-43fe-bc32-a3fb6f491017"
+            "m_owner": "ec119dbc-12ff-4c95-9260-abb11aa2a3cf"
+        },
+        {
+            "id": "40e1cc41-5ade-4e1e-8aa6-d157d332738a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 2,
+            "m_owner": "ec119dbc-12ff-4c95-9260-abb11aa2a3cf"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "ca011a41-e741-459f-b5b0-1c799f9e3b06",
+    "parentObjectId": "270fd134-514a-487f-9b17-45288a5034af",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -43,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "85cf4d23-fefc-465f-beee-c11c8755b3a4",
     "visible": true
 }
