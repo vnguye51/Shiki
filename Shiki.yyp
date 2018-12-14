@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "0c37b1d6-228e-4b47-b83c-b551ff72df71",
+            "Value": {
+                "id": "632de397-568b-4450-90c1-8dd47423b20a",
+                "resourcePath": "views\\0c37b1d6-228e-4b47-b83c-b551ff72df71.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0f05fe55-bb7a-4ed1-8b60-2dcc7a0bf397",
             "Value": {
                 "id": "1fb13acd-c0ca-49bc-97a2-3ec2143277b1",
@@ -171,6 +179,14 @@
             "Value": {
                 "id": "f8f32caa-d02e-4fb6-8fec-c3b6d75495de",
                 "resourcePath": "sprites\\PlayerFallSprite\\PlayerFallSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "218df93a-9d57-4e30-b6b4-565e8b886db2",
+            "Value": {
+                "id": "acf2b3cf-726c-478b-aa2f-1addd675c5b0",
+                "resourcePath": "sprites\\BlueEarringSprite\\BlueEarringSprite.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1452,6 +1468,14 @@
                 "id": "c159af53-36a6-4ca0-8300-a51c3bc157d5",
                 "resourcePath": "views\\fba9dad0-cf8a-4d7d-8399-b0a7faa3e2ed.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ffbdf95f-dc5f-4a47-a140-c248ba23bbdf",
+            "Value": {
+                "id": "b901ed46-c973-4622-a343-e2118670c0d3",
+                "resourcePath": "sprites\\SkullPendantSprite\\SkullPendantSprite.yy",
+                "resourceType": "GMSprite"
             }
         }
     ],

@@ -1,5 +1,8 @@
+draw_set_color(c_white)
+
 if pause{	
 	draw_sprite(MenuBackgroundSprite,0,0,0)
+	draw_sprite(MenuDividerSprite,0,60,75)
 	draw_set_font(font0)
 	var i = 0
 	for (i=0;i<array_length_1d(menu_options); i+= 1){
@@ -35,6 +38,34 @@ if pause{
 			}
 		}
 	}	
+	
+	else if menu_options[index] == "Equip" {
+		draw_sprite(MenuDividerSprite,0,150,75)
+		draw_sprite(MenuDividerSprite,0,286,75)
+		draw_sprite(ItemPlatformSprite,0,317,88)
+		draw_text(75,90,global.equipped_soul)
+		draw_text(75,110,global.equipped_armors)
+		draw_text(75,130,global.equipped_accessory1)
+		draw_text(75,150,global.equipped_accessory2)
+		draw_text(75,170,global.equipped_accessory3)
+		
+		for (i=0;i<ceil(ds_list_size(global.obtained_accessories)); i += 1){
+			if subindex == i {
+				//Grab item info and draw
+				item = global.obtained_accessories[| subindex]
+				item_info = global.accessory_map[? item]
+				item_sprite = asset_get_index(string_letters(item_info[? "name"] + "Sprite"))
+				draw_text_color(200,90+20*i,global.obtained_accessories[| i],c_lime,c_lime,c_green,c_green,1)
+				draw_text_ext(300,160,item_info[? "description"], 12, 84)
+				draw_sprite_stretched(item_sprite,0,318,90,48,48)
+
+			}
+			else {
+				iter_item = global.obtained_accessories[| i]
+				draw_text(200,90+20*i,iter_item)
+			}
+		}
+	}
 	draw_text(100,24,"HP: " + string(hp) + "/" + string(maxhp))
 	draw_text(100,44,"MP: " + string(mp) + "/" + string(maxmp))
 	draw_text(200,24,"LV: " + string(1))

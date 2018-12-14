@@ -389,18 +389,16 @@ x += hsp;
 y += vsp;
 
 
-
-if (place_meeting(x,y,DamagingObj)) //Might want to move this code into the enemy later
-{
-	if invuln == false
-	{
+var DamagingInstance = instance_place(x,y,DamagingObj)
+if DamagingInstance != noone {
+	if invuln == false{
 		invuln = true
 		attacking = false
 		magicattacking = false
 		alarm[2] = -1
 		alarm[7]= -1
 		var text = instance_create_depth(x-5,y-5,1,DamageTextObj)
-		text.damage = 10
+		text.damage = DamagingInstance.attack
 		text.color = c_red
 		hp = max(hp-10,0)
 		if hp <= 0
@@ -416,8 +414,7 @@ if (place_meeting(x,y,DamagingObj)) //Might want to move this code into the enem
 			control = false
 			injured = true
 			hsp = 0
-		}
-		
+		}	
 	}
 }
 

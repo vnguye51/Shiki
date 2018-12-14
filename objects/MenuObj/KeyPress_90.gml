@@ -21,7 +21,6 @@ if pause{
 	}
 	//Item menu actions
 	else if menu_options[index] == "Items" {
-		show_debug_message(subindex)
 		curr_item = global.obtained_item_list[| subindex]
 		curr_item_count = global.obtained_items[? curr_item]
 		curr_item_count = max(0,curr_item_count-1)
@@ -40,6 +39,9 @@ if pause{
 		curr_item_info = global.item_map[? curr_item]
 		//show_debug_message(curr_item_info[? "name"])
 		UseItem(string_letters(curr_item_info[? "name"]))
+	}
+	
+	else if menu_options[index] == "Equip" {
 	}
 }
 

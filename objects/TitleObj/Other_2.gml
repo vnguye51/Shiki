@@ -30,3 +30,30 @@ mirror[? "usable"] = true
 mirror[? "consumable"] = false
 ds_map_add_map(global.item_map,"Mirror",mirror)
 
+global.soul_map = ds_map_create()
+sword = ds_map_create()
+sword[? "name"] = "Sword"
+sword[? "description"] = "A plain, slightly dull sword"
+ds_map_add_map(global.soul_map,"Sword",sword)
+
+global.accessory_map = ds_map_create()
+blue_earring = ds_map_create()
+blue_earring[? "name"] = "Blue Earring"
+blue_earring[? "description"] = "Azure earrings. Increases magical prowess"
+blue_earring[? "unique"] = false
+blue_earring[? "mp"] = 10
+ds_map_add_map(global.accessory_map,"Blue Earring",blue_earring)
+
+skull_pendant = ds_map_create()
+skull_pendant[? "name"] = "Skull Pendant"
+skull_pendant[? "description"] = "Skull of some small being. Increases attack power when in danger."
+skull_pendant[? "unique"] = true
+skull_pendant[? "trigger"] = "Damage"
+ds_map_add_map(global.accessory_map,"Skull Pendant",skull_pendant)
+
+global.armor_map = ds_map_create()
+cloth = ds_map_create()
+cloth[? "name"] = "cloth"
+cloth[? "description"] = "The weakest of armors. +5 Def"
+cloth[? "def"] = 5
+ds_map_add_map(global.armor_map,"Cloth",cloth)
