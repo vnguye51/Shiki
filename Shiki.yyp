@@ -863,6 +863,14 @@
             }
         },
         {
+            "Key": "a0945ed9-421f-457f-ac74-c2103f6dfd16",
+            "Value": {
+                "id": "315cda67-e922-47b6-965c-3b2c8e87087f",
+                "resourcePath": "sprites\\ClothSprite\\ClothSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a253c061-bec1-41de-9da3-cf7a4d68eeea",
             "Value": {
                 "id": "0e44084a-94d8-422b-8f71-816ccb61a572",
@@ -996,6 +1004,14 @@
                 "id": "f941606d-8fb8-45e6-8afd-a87955f1cf3b",
                 "resourcePath": "views\\b55d2a48-929c-4644-b032-cc96537b0493.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b5756c21-c257-438f-83f5-ad5103d15ff4",
+            "Value": {
+                "id": "25925391-6843-4fda-8427-e2234bf4c3d3",
+                "resourcePath": "sprites\\SwordSprite\\SwordSprite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

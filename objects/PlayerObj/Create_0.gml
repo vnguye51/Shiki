@@ -14,6 +14,8 @@ mp = 50
 hp = 50
 maxmp = 100
 maxhp = 100
+attackpower = 10
+defensepower = 10
 
 grounded = true;
 on_slope = false;

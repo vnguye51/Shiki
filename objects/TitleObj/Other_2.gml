@@ -53,7 +53,7 @@ ds_map_add_map(global.accessory_map,"Skull Pendant",skull_pendant)
 
 global.armor_map = ds_map_create()
 cloth = ds_map_create()
-cloth[? "name"] = "cloth"
+cloth[? "name"] = "Cloth"
 cloth[? "description"] = "The weakest of armors. +5 Def"
 cloth[? "def"] = 5
 ds_map_add_map(global.armor_map,"Cloth",cloth)

@@ -1,9 +1,13 @@
 /// @description back
 // You can write your code in this editor
 
-if submenu{
+if subsubmenu{
+	subsubmenu = false
+	subsubindex = 0
+}
+else if submenu{
 	submenu = false
-	subindex = -1
+	subindex = 0
 }
 else {
 	if (!pause){
@@ -12,6 +16,8 @@ else {
 		maxhp = PlayerObj.maxhp
 		mp = PlayerObj.mp
 		maxmp = PlayerObj.maxmp
+		attackpower = PlayerObj.attackpower
+		defensepower = PlayerObj.defensepower
 		instance_deactivate_all(true)
 	}
 	else{
