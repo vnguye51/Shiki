@@ -12,8 +12,10 @@ else if submenu{
 else {
 	if (!pause){
 		pause = true;
+		basehp = PlayerObj.basehp
 		hp = PlayerObj.hp
 		maxhp = PlayerObj.maxhp
+		basemp = PlayerObj.basemp
 		mp = PlayerObj.mp
 		maxmp = PlayerObj.maxmp
 		attackpower = PlayerObj.attackpower
@@ -23,5 +25,11 @@ else {
 	else{
 		pause = false
 		instance_activate_all()
+		PlayerObj.hp = hp
+		PlayerObj.maxhp = maxhp
+		PlayerObj.mp = mp
+		PlayerObj.maxmp = maxmp
+		PlayerObj.attackpower = attackpower
+		PlayerObj.defensepower = defensepower
 	}
 }

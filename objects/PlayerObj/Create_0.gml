@@ -12,6 +12,8 @@ jumps_left = 1
 
 mp = 50
 hp = 50
+basemp = 100
+basehp = 100
 maxmp = 100
 maxhp = 100
 attackpower = 10

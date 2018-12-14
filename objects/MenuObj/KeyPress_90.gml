@@ -59,7 +59,7 @@ if pause{
 					global.equipped_accessory1 = target_item
 				}
 				else{
-					global.equipped_accessory2 = target_item
+					global.equipped_accessory1 = target_item
 				}
 			}
 			else if subindex == 3 {
@@ -94,6 +94,10 @@ if pause{
 					global.equipped_accessory3 = target_item
 				}
 			}
+			acc1 = global.accessory_map[? global.equipped_accessory1]
+			acc2 = global.accessory_map[? global.equipped_accessory2]
+			acc3 = global.accessory_map[? global.equipped_accessory3]
+			maxmp = basemp + acc1[? "mp"] + acc2[? "mp"] + acc3[? "mp"]
 		}
 		else if submenu == true{
 			subsubindex = 0
