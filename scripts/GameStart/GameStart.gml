@@ -24,6 +24,8 @@ global.equipped_armors = "Cloth"
 global.obtained_accessories = ds_list_create()
 global.obtained_accessories[| 0] = "Blue Earring"
 global.obtained_accessories[| 1] = "Skull Pendant"
+
+
 global.equipped_accessory1 = "Blue Earring" 
 global.equipped_accessory2 = "Skull Pendant"
 global.equipped_accessory3 = "----"

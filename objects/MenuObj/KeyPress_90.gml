@@ -43,7 +43,59 @@ if pause{
 		}
 	}
 	else if menu_options[index] == "Equip" {
-		if submenu == true{
+		if subsubmenu == true{
+			var target_item = global.obtained_accessories[| subsubindex]
+			if subindex == 2{
+				show_debug_message(target_item)
+				if global.equipped_accessory1 == target_item{
+					global.equipped_accessory1 = "----"
+				}
+				else if global.equipped_accessory2 == target_item{
+					global.equipped_accessory2 = global.equipped_accessory1
+					global.equipped_accessory1 = target_item
+				}
+				else if global.equipped_accessory3 == target_item{
+					global.equipped_accessory3 = global.equipped_accessory1
+					global.equipped_accessory1 = target_item
+				}
+				else{
+					global.equipped_accessory2 = target_item
+				}
+			}
+			else if subindex == 3 {
+				if global.equipped_accessory2 == target_item{
+					global.equipped_accessory2 = "----"
+				}
+				else if global.equipped_accessory1== target_item{
+					global.equipped_accessory1 = global.equipped_accessory2
+					global.equipped_accessory2 = target_item
+				}
+				else if global.equipped_accessory3 == target_item{
+					global.equipped_accessory3 = global.equipped_accessory2
+					global.equipped_accessory2 = target_item
+				}
+				else{
+					global.equipped_accessory2 = target_item
+				}
+			}
+			else if subindex == 4{
+				if global.equipped_accessory3 == target_item{
+					global.equipped_accessory3 = "----"
+				}
+				else if global.equipped_accessory1== target_item{
+					global.equipped_accessory1 = global.equipped_accessory3
+					global.equipped_accessory3 = target_item
+				}
+				else if global.equipped_accessory2 == target_item{
+					global.equipped_accessory2 = global.equipped_accessory3
+					global.equipped_accessory3 = target_item
+				}
+				else{
+					global.equipped_accessory3 = target_item
+				}
+			}
+		}
+		else if submenu == true{
 			subsubindex = 0
 			subsubmenu = true
 		}
