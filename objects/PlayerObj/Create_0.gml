@@ -16,6 +16,8 @@ basemp = 100
 basehp = 100
 maxmp = 100
 maxhp = 100
+baseattack = 10
+basedefense = 10
 attackpower = 10
 defensepower = 10
 

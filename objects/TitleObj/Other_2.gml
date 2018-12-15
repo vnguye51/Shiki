@@ -42,6 +42,9 @@ blue_earring[? "name"] = "Blue Earring"
 blue_earring[? "description"] = "Azure earrings. Increases magical prowess. +10 MP"
 blue_earring[? "unique"] = false
 blue_earring[? "mp"] = 10
+blue_earring[? "hp"] = 0
+blue_earring[? "attack"] = 0
+blue_earring[? "defense"] = 0
 ds_map_add_map(global.accessory_map,"Blue Earring",blue_earring)
 
 skull_pendant = ds_map_create()
@@ -50,11 +53,17 @@ skull_pendant[? "description"] = "Skull of some small being. Increases attack po
 skull_pendant[? "unique"] = true
 skull_pendant[? "trigger"] = "Damage"
 skull_pendant[? "mp"] = 0
+skull_pendant[? "hp"] = 0
+skull_pendant[? "attack"] = 0
+skull_pendant[? "defense"] = 0
 ds_map_add_map(global.accessory_map,"Skull Pendant",skull_pendant)
 
 no_accessory = ds_map_create()
 no_accessory[? "name"] = "----"
 no_accessory[? "mp"] = 0
+no_accessory[? "hp"] = 0
+no_accessory[? "attack"] = 0
+no_accessory[? "defense"] = 0
 ds_map_add_map(global.accessory_map,"----",no_accessory)
 
 global.armor_map = ds_map_create()

@@ -1,18 +1,8 @@
 /// @description confirm
 
 if pause{
-	//if !submenu{
-	//	if index == 1 and ds_list_size(global.obtained_item_list) > 0 {
-	//		subindex = 0
-	//		submenu = true
-	//	}
-	//	if menu_options[index] == "Equip"{
-	//		subindex = 0
-	//		submenu = true
-	//	}
 	if menu_options[index] == "Status" {
 	}
-	
 	//Item menu actions
 	else if menu_options[index] == "Items" {
 		if submenu == true{
@@ -98,6 +88,9 @@ if pause{
 			acc2 = global.accessory_map[? global.equipped_accessory2]
 			acc3 = global.accessory_map[? global.equipped_accessory3]
 			maxmp = basemp + acc1[? "mp"] + acc2[? "mp"] + acc3[? "mp"]
+			maxhp = basehp + acc1[? "hp"] + acc2[? "hp"] + acc3[? "hp"]
+			attackpower = baseattack + acc1[? "attack"] + acc2[? "attack"] + acc3[? "attack"]
+			defensepower = basedefense + acc1[? "defense"] + acc2[? "defense"] + acc3[? "defense"]
 		}
 		else if submenu == true{
 			subsubindex = 0

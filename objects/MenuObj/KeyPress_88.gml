@@ -18,6 +18,8 @@ else {
 		basemp = PlayerObj.basemp
 		mp = PlayerObj.mp
 		maxmp = PlayerObj.maxmp
+		baseattack = PlayerObj.baseattack
+		basedefense = PlayerObj.basedefense
 		attackpower = PlayerObj.attackpower
 		defensepower = PlayerObj.defensepower
 		instance_deactivate_all(true)
