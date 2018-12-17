@@ -289,7 +289,8 @@
         "b14a761f-772b-47d8-af39-b5643ec28701",
         "768bc75b-94d1-4c7b-ab87-72c7f5c6d517",
         "a590939d-5673-4116-828c-d46a37d2b921",
-        "71440fca-26e4-471e-9277-53415b48e6d6"
+        "71440fca-26e4-471e-9277-53415b48e6d6",
+        "14cfa0a5-3802-4104-ac89-a7fd7bffa8a8"
     ],
     "IsDnD": false,
     "layers": [
@@ -298,8 +299,8 @@
             "name": "Zones",
             "id": "62886891-520c-4e26-8602-d0f710a8c785",
             "depth": 0,
-            "grid_x": 32,
-            "grid_y": 32,
+            "grid_x": 10,
+            "grid_y": 10,
             "hierarchyFrozen": false,
             "hierarchyVisible": true,
             "inheritLayerDepth": false,
@@ -307,7 +308,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-
+{"name": "inst_5FE4B594","id": "14cfa0a5-3802-4104-ac89-a7fd7bffa8a8","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_5FE4B594","objId": "7da18a0d-2599-417b-ae88-69e9d8c9e1e7","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 280,"y": 360}
             ],
             "layers": [
 

@@ -385,6 +385,12 @@ if grounded and key_up and (place_meeting(x+30,y,BaseNPCObj)){
 	DialogScript(BaseNPCObj.dialog,0.5,Test1,Test2)
 }
 
+var chest = instance_place(x+30,y,ChestObj)
+if grounded and key_up and chest != noone and chest.opened == false{
+	OpenChest(chest)
+}
+
+
 x += hsp;
 y += vsp;
 
