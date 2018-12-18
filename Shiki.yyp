@@ -458,7 +458,15 @@
             "Key": "4494b6aa-2485-44cb-aebc-8561deb777b1",
             "Value": {
                 "id": "7682bef8-6700-40aa-8922-ee89ec2f6df1",
-                "resourcePath": "sprites\\Skeleton\\Skeleton.yy",
+                "resourcePath": "sprites\\SkeletonWalkSprite\\SkeletonWalkSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "45ffb566-facc-4293-868b-949a37a47677",
+            "Value": {
+                "id": "c218a2f2-54c4-40d2-8de1-5f6c04a83aeb",
+                "resourcePath": "sprites\\SkeletonAttackSprite\\SkeletonAttackSprite.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -498,7 +506,7 @@
             "Key": "50e2ba48-18d4-4dbf-8830-fd3b822415f0",
             "Value": {
                 "id": "84cf7e8b-2b92-48f8-872a-43f45151492b",
-                "resourcePath": "sprites\\sprite26\\sprite26.yy",
+                "resourcePath": "sprites\\SkeletonPieces\\SkeletonPieces.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1491,6 +1499,14 @@
             "Value": {
                 "id": "ed924eb6-8527-4996-8e3a-d1217ecabd8d",
                 "resourcePath": "views\\f51e4311-879f-4327-87f9-ae643c2da9a3.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f5755a4d-6659-4911-9fc9-2c66dc14bb15",
+            "Value": {
+                "id": "a19be717-7906-49b0-b16f-449e045f70c0",
+                "resourcePath": "views\\f5755a4d-6659-4911-9fc9-2c66dc14bb15.yy",
                 "resourceType": "GMFolder"
             }
         },

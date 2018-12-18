@@ -2,7 +2,7 @@
     "id": "50e2ba48-18d4-4dbf-8830-fd3b822415f0",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprite26",
+    "name": "SkeletonPieces",
     "For3D": false,
     "HTile": false,
     "VTile": false,
