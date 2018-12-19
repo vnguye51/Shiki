@@ -1391,6 +1391,14 @@
             }
         },
         {
+            "Key": "e99fba1e-3a21-4ac3-8cb7-847383e997a1",
+            "Value": {
+                "id": "cac091ab-23e6-4647-ad54-ceb2cb63fcb2",
+                "resourcePath": "sprites\\GhoulDeathSprite\\GhoulDeathSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ea36a803-db97-4eac-85a7-275d677a420c",
             "Value": {
                 "id": "10d8c95d-f23e-471d-887a-d824c1f87448",
