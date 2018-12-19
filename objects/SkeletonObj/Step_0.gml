@@ -18,7 +18,7 @@ if (instance_exists(PlayerObj))
 	}
 	else{
 		sprite_index = SkeletonWalkSprite
-		if(abs(PlayerObj.x-x) < 38){
+		if(abs(PlayerObj.x-x) < 30){
 			image_index = 0
 			state = "attacking"
 			alarm[0] = 60

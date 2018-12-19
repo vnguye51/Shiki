@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "1259e87b-9eb1-41d1-91c5-7f80e9c46450",
+            "Value": {
+                "id": "45020661-b23f-45c6-b9f4-38c34c12c9a4",
+                "resourcePath": "objects\\GhoulObj\\GhoulObj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "13884c25-71e0-4c38-bb44-fbb31cb69cb2",
             "Value": {
                 "id": "2810759f-222c-4712-b5fb-79826f494ccd",
@@ -1015,6 +1023,14 @@
             }
         },
         {
+            "Key": "aad117ca-6721-43e1-872f-8de9520266b7",
+            "Value": {
+                "id": "446d6a2d-a984-4dd3-847a-3e9cddec7293",
+                "resourcePath": "sprites\\GhoulWalkSprite\\GhoulWalkSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ad8f3635-12e1-4076-a9f2-2409f69cb352",
             "Value": {
                 "id": "ee4ed102-e792-44a3-94d7-d466674e5865",
@@ -1372,6 +1388,14 @@
                 "id": "8152ff4b-3443-431d-b704-ddd5900d395c",
                 "resourcePath": "objects\\SkeletonObj\\SkeletonObj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ea36a803-db97-4eac-85a7-275d677a420c",
+            "Value": {
+                "id": "10d8c95d-f23e-471d-887a-d824c1f87448",
+                "resourcePath": "views\\ea36a803-db97-4eac-85a7-275d677a420c.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
